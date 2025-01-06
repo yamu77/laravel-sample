@@ -1,0 +1,23 @@
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql-container
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+  dev:
+    image: php:8.2-fpm
+    container_name: dev
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./work:/work
+    working_dir: /work
+    ports:
+      - "8000:8000"
+      - "5173:5173"
+
