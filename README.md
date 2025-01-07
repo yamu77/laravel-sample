@@ -20,3 +20,11 @@ npm install && npm run build
 # サーバー起動
 composer run dev
 ```
+
+## ログインユーザー情報
+
+```txt
+ユーザー名: test
+メールアドレス: test@test.com
+パスワード: testtest
+```
